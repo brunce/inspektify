@@ -1,0 +1,14 @@
+{
+    "assets": [
+        {
+            "name": "dependency_textures",
+            "absolutePath": "",
+            "isStreamingAsset": true
+        },
+        {
+            "name": "scene_map",
+            "absolutePath": "",
+            "isStreamingAsset": true
+        }
+    ]
+}

@@ -12,7 +12,29 @@
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 		782EDC422CBAB4BF008DC8D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782EDC412CBAB4BF008DC8D5 /* AppDelegate.swift */; };
+		A62A40492CE1F7ED00015A7D /* UnityEmbeddedSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65106D12CDDE75100626C56 /* UnityEmbeddedSwift.swift */; };
+		A62A404A2CE1F7ED00015A7D /* UnityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65106FC2CDDED6500626C56 /* UnityView.swift */; };
+		A62A404B2CE1F7ED00015A7D /* UnityBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65106D52CDDE7FF00626C56 /* UnityBridge.swift */; };
+		A62A404C2CE1F7ED00015A7D /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65106D32CDDE7E700626C56 /* Vector3.swift */; };
+		A62A404D2CE1F7ED00015A7D /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65106D72CDDE82B00626C56 /* MulticastDelegate.swift */; };
+		A62A40562CE2075C00015A7D /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62A40542CE2075100015A7D /* UnityFramework.framework */; };
+		A62A40572CE2075C00015A7D /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A62A40542CE2075100015A7D /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A65106FF2CDDF26800626C56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65106FE2CDDF26200626C56 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A62A40522CE1F8D700015A7D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A62A40572CE2075C00015A7D /* UnityFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -23,6 +45,13 @@
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		782EDC412CBAB4BF008DC8D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78C727BE2C8F4C3200DD8943 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A62A40542CE2075100015A7D /* UnityFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UnityFramework.framework; path = Dependencies/UnityFramework.framework; sourceTree = "<group>"; };
+		A65106D12CDDE75100626C56 /* UnityEmbeddedSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityEmbeddedSwift.swift; sourceTree = "<group>"; };
+		A65106D32CDDE7E700626C56 /* Vector3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
+		A65106D52CDDE7FF00626C56 /* UnityBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityBridge.swift; sourceTree = "<group>"; };
+		A65106D72CDDE82B00626C56 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		A65106FC2CDDED6500626C56 /* UnityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityView.swift; sourceTree = "<group>"; };
+		A65106FE2CDDF26200626C56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AB3632DC29227652001CCB65 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -31,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A62A40562CE2075C00015A7D /* UnityFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +78,7 @@
 		42799AB246E5F90AF97AA0EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A62A40542CE2075100015A7D /* UnityFramework.framework */,
 				78C727BE2C8F4C3200DD8943 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
@@ -74,14 +105,28 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				A65106D02CDDE6F700626C56 /* UnityIntegration */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
 				782EDC412CBAB4BF008DC8D5 /* AppDelegate.swift */,
+				A65106FE2CDDF26200626C56 /* SceneDelegate.swift */,
 			);
 			path = iosApp;
+			sourceTree = "<group>";
+		};
+		A65106D02CDDE6F700626C56 /* UnityIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				A65106FC2CDDED6500626C56 /* UnityView.swift */,
+				A65106D12CDDE75100626C56 /* UnityEmbeddedSwift.swift */,
+				A65106D32CDDE7E700626C56 /* Vector3.swift */,
+				A65106D52CDDE7FF00626C56 /* UnityBridge.swift */,
+				A65106D72CDDE82B00626C56 /* MulticastDelegate.swift */,
+			);
+			path = UnityIntegration;
 			sourceTree = "<group>";
 		};
 		AB1DB47929225F7C00F7AF9C /* Configuration */ = {
@@ -103,6 +148,7 @@
 				7555FF77242A565900829871 /* Sources */,
 				B92378962B6B1156000C7307 /* Frameworks */,
 				7555FF79242A565900829871 /* Resources */,
+				A62A40522CE1F8D700015A7D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,8 +235,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A62A40492CE1F7ED00015A7D /* UnityEmbeddedSwift.swift in Sources */,
+				A62A404A2CE1F7ED00015A7D /* UnityView.swift in Sources */,
+				A62A404B2CE1F7ED00015A7D /* UnityBridge.swift in Sources */,
+				A62A404C2CE1F7ED00015A7D /* Vector3.swift in Sources */,
+				A62A404D2CE1F7ED00015A7D /* MulticastDelegate.swift in Sources */,
 				782EDC422CBAB4BF008DC8D5 /* AppDelegate.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				A65106FF2CDDF26800626C56 /* SceneDelegate.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,12 +377,13 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				DEVELOPMENT_TEAM = "${TEAM_ID}";
+				DEVELOPMENT_TEAM = D9D6F4LN9J;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 					"$(SRCROOT)/../composeApp/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
+					"$(PROJECT_DIR)/Dependencies",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
@@ -354,12 +407,13 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
-				DEVELOPMENT_TEAM = "${TEAM_ID}";
+				DEVELOPMENT_TEAM = D9D6F4LN9J;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 					"$(SRCROOT)/../composeApp/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
+					"$(PROJECT_DIR)/Dependencies",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.3;

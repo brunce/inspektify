@@ -4,7 +4,7 @@ inspektify-version = "1.0.0-beta05"
 
 # GENERAL dependencies
 agp = "8.4.0"
-kotlin = "2.0.20"
+kotlin = "2.0.21"
 compose-plugin = "1.7.0-beta02" # TODO change to stable as soon as possible
 
 # ANDROID PORJECT dependencies

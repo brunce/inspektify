@@ -1,139 +1,43 @@
-<p align="center">
-  <td><img src="inspektify/screenshots/inspektify_logo.png" width=560></td>
-</p>
+# Test project to reproduce linking issue
 
-<p align="center">
-  <a href="https://central.sonatype.com/artifact/io.github.bvantur/inspektify-ktor3">
-    <img alt="Maven" src="https://img.shields.io/maven-metadata/v.svg?label=mavenVersion&logo=apachemaven&metadataUrl=https%3A%2F%2Frepo1.maven.org%2Fmaven2%2Fio%2Fgithub%2Fbvantur%2Finspektify-ktor3%2Fmaven-metadata.xml" height=30 />
-  </a>
-</p>
-<p align="center">
-  <img alt="Android" src="https://img.shields.io/badge/Platform-Android-Blue?style=for-the-badge"/>
-  <img alt="Ios" src="https://img.shields.io/badge/Platform-Ios-Blue?style=for-the-badge"/>
-  <img alt="Ios" src="https://img.shields.io/badge/Platform-Desktop-Blue?style=for-the-badge"/>
-</p>
+This fork demonstrates a linking issue that occurs when using `Inspektify` with `Unity` in an iOS app.  
+It runs only on a physical device, not in the simulator.
 
-Inspektify is Kotlin Multiplatform Library for iOS, Android and Desktop platforms. It allows you to
-observe the network of your application in real-time directly on your device.
+## Problem Description
 
-<p align="center">
-  <img src="inspektify/screenshots/inspektify.gif" width=320>
-</p>
-
-# Getting started
-
-This library can be used only on projects that are using Ktor for network communication. If there is
-a need to support a different networking library besides Ktor open an issue for it. Inspektify is
-supported only for projects that are using the Ktor library equal to or greater than 2.3.1.
-
-## 1. Gradle
-
-This library is available on mavenCentral. To use it in your project add the following repository if
-you don't have it yet.
-
+When building as a _static library_, the iOS app fails to run if Xcode's `Thread Performance Checker` is enabled. Upon startup, the following error is triggered:
 ```
-repositories { 
-    ...
-    mavenCentral()
-}
+libRPAC.dylib`invocation function for block in initializePrimitiveMap():
+    0x10329a9c8 <+0>:   pacibsp 
+    0x10329a9cc <+4>:   stp    x22, x21, [sp, #-0x30]!
+    0x10329a9d0 <+8>:   stp    x20, x19, [sp, #0x10]
+    0x10329a9d4 <+12>:  stp    x29, x30, [sp, #0x20]
+    0x10329a9d8 <+16>:  add    x29, sp, #0x20
+    0x10329a9dc <+20>:  bl     0x103297904               ; getNumCPU
+    0x10329a9e0 <+24>:  sub    w8, w0, #0x1
+    0x10329a9e4 <+28>:  cmp    w8, #0x3e
+    0x10329a9e8 <+32>:  b.hi   0x10329a9f4               ; <+44>
+    0x10329a9ec <+36>:  adrp   x8, 14
+    0x10329a9f0 <+40>:  str    w0, [x8, #0x840]
+    0x10329a9f4 <+44>:  mov    x19, #0x0                 ; =0 
+    0x10329a9f8 <+48>:  mov    w20, #0x3f800000          ; =1065353216 
+    0x10329a9fc <+52>:  adrp   x21, 1166
+    0x10329aa00 <+56>:  add    x21, x21, #0xd20          ; primitive_map
+    0x10329aa04 <+60>:  mov    w0, #0x28                 ; =40 
+    0x10329aa08 <+64>:  mov    x1, #0x4b1c               ; =19228 
+    0x10329aa0c <+68>:  movk   x1, #0x8ef2, lsl #16
+    0x10329aa10 <+72>:  movk   x1, #0x80, lsl #32
+    0x10329aa14 <+76>:  movk   x1, #0x10a, lsl #48
+    0x10329aa18 <+80>:  bl     0x10329ebb0               ; symbol stub for: operator new(unsigned long, std::__type_descriptor_t)
+->  0x10329aa1c <+84>:  movi.2d v0, #0000000000000000
+...
 ```
 
-### Ktor 3.x.x
+When Xcode’s `Thread Performance Checker` is disabled, the app runs without issues.
 
-If your project is using Ktor version in the 3.x.x family add Inspektify with this line:
+## Analysis
 
-```
-commonMain.dependencies {
-    ...
-    implementation("io.github.bvantur:inspektify-ktor3:{mavenVersion}")
-}
-```
+This issue appears to stem from a conflict between the `sqlite3` libraries used by `Inspektify` and, presumably, by `Unity` as well.
 
-### Ktor 2.3.1 - 3.0.0
-
-If your project is using Ktor version between 2.3.1 and 3.0.0 add Inspektify with this line:
-
-```
-commonMain.dependencies {
-    ...
-    implementation("io.github.bvantur:inspektify-ktor2:{mavenVersion}")
-}
-```
-
-### iOS target
-
-Depending on your project setting there are 2 different ways that need to be done to make it work on
-iOS target.
-
-#### Static Framework (`isStatic = true`)
-
-If your iOS targets are set as static you need to follow the next steps:
-
-1. Open your iOS project in Xcode
-2. Select your root element in your iOS project directory tree(usually named with iosApp by default)
-3. Select your TARGET
-4. Go to Build Settings
-5. Search for **Other Linker Flags**
-6. Add `-lsqlite3` to it
-
-#### Dynamic Framework (`isStatic = false`)
-
-If your iOS targets are set to be dynamic, then it is necessary to add this additional gradle
-configuration to your project:
-
-```
-iosTarget.binaries.all {
-  linkerOpts("-lsqlite3")
-}
-```
-
-The sample project is currently configured as dynamic, so you can see how this approach can be
-implemented there.
-
-## 2. Kotlin
-
-You need to configure the library wherever you are creating a Ktor client in your project.
-Configuration follows the defined design of the Ktor library by installing a plugin directly to the
-Ktor client.
-The minimum code for including the Inspektify library in the project is:
-
-```
-HttpClient() {
-    ...
-    install(InspektifyKtor)
-}
-```
-
-# Additional configuration
-
-This library was built with flexibility in mind. We don't want to force the behavior of the library
-upon the developer who uses this library, so we implemented a couple of configurations for the
-library to make it more flexible. The library also tracks which network transactions are from
-current active app sessions and highlights them in the list with a different background color.
-Network transactions from previous sessions have a background in light gray color.
-
-1. [Presentation type](docs/PRESENTATION_TYPE.md)
-2. [Log level](docs/LOG_LEVEL.md)
-3. [Data retention policy](docs/DATA_RETENTION_POLICY.md)
-4. [Shortcut for mobile clients](docs/SHORTCUT_FOR_MOBILE_CLIENTS.md)
-5. [Excluding Inspektify from Release Builds](docs/EXCLUDING_INSPEKTIFY_FROM_RELEASE_BUILDS.md)
-
-## Sample project
-
-A sample project is included where you can test the behavior of the Inspektify library. By default,
-the sample is configured to use Ktor from the 3.x.x family, but if you want to test with Ktor from
-2.3.1 to 3.0.0 versions you need to change the next line in gradle.properties:
-
-`inspektify.ktorVersion=v2`
-
-## Contact me
-
-<a href="https://github.com/BVantur">
-    <img src="https://skillicons.dev/icons?i=github" alt="Github Profile" width="40" height="40">
-</a>
-<a href="https://www.linkedin.com/in/bla%C5%BE-vantur-9aa466a0/">
-    <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width="40" height="40">
-</a>
-<a href="https://medium.com/@bvantur">
-    <img src="https://miro.medium.com/v2/resize:fit:1400/1*psYl0y9DUzZWtHzFJLIvTw.png" alt="Medium" width="40" height="40">
-</a>
+- Building the `kmp library` as a _dynamic library_ resolves this issue but isn’t a feasible solution for our project due to other downstream issues.
+- With `Thread Performance Checker` enabled, `libRPAC` seems to perform analyses related to `SQLite` symbols, which leads to this error. A similar issue is discussed in this article: [Dynamic Linking Crash with Xcode 16](https://www.nutrient.io/blog/dynamic-linking-crash-xcode-16/).
