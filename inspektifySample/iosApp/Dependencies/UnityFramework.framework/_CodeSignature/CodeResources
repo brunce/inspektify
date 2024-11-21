@@ -6,7 +6,7 @@
 	<dict>
 		<key>Data/Managed/Metadata/global-metadata.dat</key>
 		<data>
-		zmmHFRg7k1CJF5EVlpkdoStkqDI=
+		hseCKgx1bxRayYmm43SFec/Z81k=
 		</data>
 		<key>Data/Managed/Resources/mscorlib.dll-resources.dat</key>
 		<data>
@@ -28,57 +28,57 @@
 		<data>
 		0Gbaj9bxMPkNpiIMVH68hEkuICU=
 		</data>
+		<key>Data/Resources/unity default resources</key>
+		<data>
+		R2XRcaA2Bkzdjlm61mVP7jGRpVI=
+		</data>
 		<key>Data/Resources/unity_builtin_extra</key>
 		<data>
-		q3ndohG6v8Mb7y8WG/SXu2YPB9Q=
+		8XtxwVmZzdJifM5JmlWQNNkGU+o=
 		</data>
 		<key>Data/RuntimeInitializeOnLoads.json</key>
 		<data>
-		mFG1KJj14k+cJU99EMfSksgjO2s=
+		LABLLfKHKBvB3eUgbx45VYS9eLE=
 		</data>
 		<key>Data/ScriptingAssemblies.json</key>
 		<data>
-		x3zpA2ESGllixzy8R/Asb4c1ybk=
+		D8uvwYT7UzNrNzaxymqCZp9Ng7k=
 		</data>
 		<key>Data/boot.config</key>
 		<data>
-		dHdI+Hlz1iZJWvcznsCWaT5QEMg=
+		o+P82+iPlVSdns44v0xhew8SlbM=
 		</data>
 		<key>Data/globalgamemanagers</key>
 		<data>
-		TLJNsOHWo7TGOTcT2VL/3MnuVzY=
+		AJNU8aNMMaaKl7kHimLQlcAvOyk=
 		</data>
 		<key>Data/globalgamemanagers.assets</key>
 		<data>
-		txGoZ3rXAJ8MZyRUGmPtlC7G4eo=
+		PkPVEAutvNdcvFWQt6W9lvYTVUw=
 		</data>
 		<key>Data/globalgamemanagers.assets.resS</key>
 		<data>
-		V0/82+I/d25sk4roRDqgkuGrAr0=
+		KDY2Qy5GzOx9Npk2O+xbmH92P7E=
 		</data>
 		<key>Data/level0</key>
 		<data>
-		HIadX5jk/076J6BS60suCnxDs2U=
+		mDIa7S8EiVZV8c96So9ZvCSfv0U=
 		</data>
 		<key>Data/resources.assets</key>
 		<data>
-		FFCe5S7cGdEzjtg7NsVHhEpsghc=
+		2broSQu+XNVXR2oAfW7tNF7d+BE=
 		</data>
 		<key>Data/resources.assets.resS</key>
 		<data>
-		P0/p++burGjIRcBQPEvfDrXISv4=
+		xBGhNzsq8sDMZC4+WHgFVIZAcWY=
 		</data>
 		<key>Data/sharedassets0.assets</key>
 		<data>
-		WHNWragKFTvlVBKQ30wtouib1s4=
+		FqtUgKRrmXfAvyPHxH/BnBdkkL8=
 		</data>
 		<key>Data/sharedassets0.assets.resS</key>
 		<data>
-		p+lF9BVA16Xg4is4lIchoh8TcyA=
-		</data>
-		<key>Data/unity default resources</key>
-		<data>
-		Jvdwf9UHYpc6Qn5ojNOTQ+lns90=
+		DZnHTcIt85PtIfj4rFthtn02IDk=
 		</data>
 		<key>Headers/LifeCycleListener.h</key>
 		<data>
@@ -86,27 +86,27 @@
 		</data>
 		<key>Headers/MapFrameworkConstants.h</key>
 		<data>
-		NMP1AZtQd+9VVW1cgPH/1Qb4WYA=
+		dEDrGb/TY6oBLM93n2O1cY58rhU=
 		</data>
 		<key>Headers/RedefinePlatforms.h</key>
 		<data>
-		t5fnMlaRcTXSkweA3ZcEy4m4LAY=
+		Z0jWGRdBKDqn4dWFNEW2Z7CDevA=
 		</data>
 		<key>Headers/RenderPluginDelegate.h</key>
 		<data>
-		knaqYLfDcvG4nTHvIflNx45T4SQ=
+		QwnZE9G82ciiI/J4pb0pGc6zwps=
 		</data>
 		<key>Headers/UndefinePlatforms.h</key>
 		<data>
-		7lerA66YoF7JFDfEyb9mkMk2jkA=
+		5hcS7AI5t4wkKmffQBUUTwF3Odk=
 		</data>
 		<key>Headers/UnityAppController.h</key>
 		<data>
-		u5mybGK78FcWgY5yoYCYcap0GCQ=
+		6rC11fh1WEZ5GadZRIdHgUHTMzY=
 		</data>
 		<key>Headers/UnityFramework.h</key>
 		<data>
-		HLeS93s62I9jpmaj2VoaEMpy5zk=
+		GW4FD8ppKXWMRHfTiTUDMjmer58=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -120,9 +120,13 @@
 		<data>
 		s3d0gu6BAqmX9L9A+flB8GlJPbQ=
 		</data>
+		<key>il2cpp-symbols.txt</key>
+		<data>
+		sDovlJ+sRus70QnH5iWE7O3rRPA=
+		</data>
 		<key>libiPhone-lib.dylib</key>
 		<data>
-		CkdJVRp69UETt5tPwblBbgWAtd8=
+		BYaoKc3m73iWnr71BR1CgFMZ1tI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -131,7 +135,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VyKjbu0WWXe1h12P+oKlr8uLjAwLRetPLZpfBixA18g=
+			qO8Dc95MZnH88HF/vQc++VvSbwzXJnaEbLcPLdtMwJk=
 			</data>
 		</dict>
 		<key>Data/Managed/Resources/mscorlib.dll-resources.dat</key>
@@ -169,95 +173,95 @@
 			veAZAKwm4+QalnUC09n/IPhI1ElJ1+QsPrdBd0bUiuE=
 			</data>
 		</dict>
+		<key>Data/Resources/unity default resources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/LIEdB+Whv2CG9GKFSELSaSjEgSSI0bHZtTEZyLncRo=
+			</data>
+		</dict>
 		<key>Data/Resources/unity_builtin_extra</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FPy63JYD2ZyMTGGdkm28ZxcXzitkuH4r/D/VsCHyyE0=
+			vV5vSgTmERSX/sdgj5gy5Ogzo4TQrVXDYl61qVKHnas=
 			</data>
 		</dict>
 		<key>Data/RuntimeInitializeOnLoads.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mIdacuB7s3GGnZ+fSdT4o8LY+ENp7VHvAHJlo7IwZE4=
+			rOXc20jHImEz29I6rmRONw+26six5dzwu7WR+C4jS0g=
 			</data>
 		</dict>
 		<key>Data/ScriptingAssemblies.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PO2FhPwxZGfZOUt+UnbdMdrhk+gKyWpK/zMKwC8jGE8=
+			0pofMSziFq7P++YozjMK5pgQnNmNDD3lLqSQKhZbhNA=
 			</data>
 		</dict>
 		<key>Data/boot.config</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ltgg1uorka9AaDYpbyGawgZcjAILnX5XQcOVJRGye+I=
+			sscIYxEG7ndATkIBGxXMkUeym3+4okPAR65/aF6wBfs=
 			</data>
 		</dict>
 		<key>Data/globalgamemanagers</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0Q9gUWgwpCD4cFORhDEmbR93gJycVZY3xkQWFfo8PZY=
+			ozsPb3773LSXFHSuLs0fMmSv8Dt0HnEnoZKyE1tjEGU=
 			</data>
 		</dict>
 		<key>Data/globalgamemanagers.assets</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			z2VQ9+4NYGfbbfwJi+Bhu7WRTjozQiwgF1DX7DrZnBA=
+			e9rmWWjIMIQCNkz1/aerWln3P/U4VBVFBtz0Xg849Cg=
 			</data>
 		</dict>
 		<key>Data/globalgamemanagers.assets.resS</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cnSmv9ucOzF7Dyg6r8nkqQKVQw7D0bqCZOGK4FXPOho=
+			BmaQnWVPBBlbFwSH3WfClqgy/M62QLsQdWTZhpBjJQs=
 			</data>
 		</dict>
 		<key>Data/level0</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NnDshW+xRMNrSS/hy5iRIxkEjHoYk/lu+9SMwNylkRo=
+			O8EJ7VdydehMYTz0C+v5Pux6Hware0lEPIyNuB5nf2c=
 			</data>
 		</dict>
 		<key>Data/resources.assets</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lx3W97L13Wqy8ReM32rEXAA2xBJrsrzJvju7DmPGyRg=
+			DBGgmFkNW2lfqkjPwvR4e5AFfzEG484Q0Z7tu33Ei8o=
 			</data>
 		</dict>
 		<key>Data/resources.assets.resS</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V0QlbEQyqXb3TB23ZYidcYlWBH1TmaiHOZfJwA4DMjk=
+			vPgtIoM0Pc7f4qeCihu+ytczlDeTMCp+yiMGIDy3xLY=
 			</data>
 		</dict>
 		<key>Data/sharedassets0.assets</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+2PBVV8CAh+1I5ARfNJHGuz/atavn2D5cgzt8ZFR2No=
+			8cYtf1M0XsVtUwpRRG3hDhsIDgXduFPmQioT+1/pEr0=
 			</data>
 		</dict>
 		<key>Data/sharedassets0.assets.resS</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ciAy6z2CiFWXGZZhUu56vdziJSfxSro+QFIK3nVUjYs=
-			</data>
-		</dict>
-		<key>Data/unity default resources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			VM39IGcBgaKrhKRwxq5/01Bd1+BwbCiTq/LTeogZ4DA=
+			SrKvkFGeVndHgXiuGVsKE6na/jg2pEDbhodTjLM4FRc=
 			</data>
 		</dict>
 		<key>Headers/LifeCycleListener.h</key>
@@ -271,42 +275,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			s2NWIDx2aJF9ghOTA7wI4UjS+Z8PhTcM9L++t1aDQfM=
+			ZmYZpKl9JC/pbrkctbXJyilJu27gEMXx5FjOTdhdOfA=
 			</data>
 		</dict>
 		<key>Headers/RedefinePlatforms.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			swpeJYWotsiI+dn1FXW57mYVdjZpNOGz0KDs/oS8H7Y=
+			R3BdzZ1tYutAYGxKP+O0kh9nxzgJVoJhENhZLQrK42I=
 			</data>
 		</dict>
 		<key>Headers/RenderPluginDelegate.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MMeuPJjXCZk6TG0sD3cNxleTVp8o7f1KfT3GycSsfKM=
+			hXFbMS3t9jr40I4TLtphAErZrWvRidhTUm0VK/GR1+I=
 			</data>
 		</dict>
 		<key>Headers/UndefinePlatforms.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r1S/jmTaA96wJZyIprzgTVjEea5ETf3rz3QNFOvqapQ=
+			9v2VBzSy/HkveK+e+GFxUJYTW/HOscuCKAE0b9AxMtU=
 			</data>
 		</dict>
 		<key>Headers/UnityAppController.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SCDDKEvv01hGGy1Zo3xKuABNQabIg0Ak2zA7xWuFCIE=
+			HDAgHH6+qNDcOHA/hGl4fKzFvtMcucasGn+4OMZbxvI=
 			</data>
 		</dict>
 		<key>Headers/UnityFramework.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sHvYk3HY0tGOUd7PLyLM+VViuvI5JOq97OrlTn3amRs=
+			VH9nnTKGYNf/tQ391ClE/urUI/F8Kfws63Rw2aIDmYs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -323,11 +327,18 @@
 			zBKybnNzluhHICr1gk1BVoKt7LTg4tlXEhT1xAifuG8=
 			</data>
 		</dict>
+		<key>il2cpp-symbols.txt</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			83PQ2aLPRx6EZCyFzI5zumwW9+E4246+65xytcIZ1Jo=
+			</data>
+		</dict>
 		<key>libiPhone-lib.dylib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YVusYfJf2/1u2vUjzoq5rnt0C+hOpW6YGevjDdu1j78=
+			kBnXWKbjjyQUM7Dvsoh76njUSmKZjen70kA9akJKp0k=
 			</data>
 		</dict>
 	</dict>
