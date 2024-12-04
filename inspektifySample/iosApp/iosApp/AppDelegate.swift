@@ -7,29 +7,28 @@
 //
 
 import UIKit
-import ComposeApp
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
-    static var shared: AppDelegate? { UIApplication.shared.delegate as? AppDelegate }
-    
-    var window: UIWindow?
-    var launchOptions: [UIApplication.LaunchOptionsKey: Any]?
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        self.launchOptions = launchOptions
-        return true
-    }
-    
-    func application(
-        _ application: UIApplication,
-        configurationForConnecting connectingSceneSession: UISceneSession,
-        options: UIScene.ConnectionOptions
-    ) -> UISceneConfiguration {
-        let configuration = InspektifyShortcutHandlerKt.getInspektifyUISceneConfiguration(configurationForConnectingSceneSession: connectingSceneSession)
-        if connectingSceneSession.role == .windowApplication {
-            configuration.delegateClass = SceneDelegate.self
-        }
-        return configuration
-    }
+//    static var shared: AppDelegate? { UIApplication.shared.delegate as? AppDelegate }
+//    
+//    var window: UIWindow?
+//    var launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+//    
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+//        self.launchOptions = launchOptions
+//        return true
+//    }
+//    
+//    func application(
+//        _ application: UIApplication,
+//        configurationForConnecting connectingSceneSession: UISceneSession,
+//        options: UIScene.ConnectionOptions
+//    ) -> UISceneConfiguration {
+//        let configuration = UISceneConfiguration()
+//        if connectingSceneSession.role == .windowApplication {
+//            configuration.delegateClass = SceneDelegate.self
+//        }
+//        return configuration
+//    }
 }
