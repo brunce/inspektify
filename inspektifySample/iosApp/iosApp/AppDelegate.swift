@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ComposeApp
+//import ComposeApp
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
@@ -26,7 +26,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         configurationForConnecting connectingSceneSession: UISceneSession,
         options: UIScene.ConnectionOptions
     ) -> UISceneConfiguration {
-        let configuration = InspektifyShortcutHandlerKt.getInspektifyUISceneConfiguration(configurationForConnectingSceneSession: connectingSceneSession)
+//        let configuration = InspektifyShortcutHandlerKt.getInspektifyUISceneConfiguration(configurationForConnectingSceneSession: connectingSceneSession)
+        let configuration = UISceneConfiguration()
         if connectingSceneSession.role == .windowApplication {
             configuration.delegateClass = SceneDelegate.self
         }
